@@ -1,0 +1,74 @@
+https://www.festisite.com/logo/google/
+
+display: flex
+
+Google Inspector
+
+DomDocument
+
+Избавление от # javascript:
+
+Нет Титулки, не будет ссылки - так в гугл DomDocument getdetails
+
+	$query = $con->prepare("INSERT INTO sites(url, title, description, keywords)
+							VALUES(:url, :title, :description, :keywords)");
+
+	$query->bindParam(":url", $url);
+	$query->bindParam(":title", $title);
+	$query->bindParam(":description", $description);
+	$query->bindParam(":keywords", $keywords);
+
+// Ограничение количества слов
+	private function trimField($string, $characterLimit) {
+
+		$dots = strlen($string) > $characterLimit ? "..." : "";
+		return substr($string, 0, $characterLimit) . $dots;
+	}
+
+Пагинация
+
+Работа с базой
+
+//сортировка по кликам
+query = $this->con->prepare("SELECT * 
+FROM sites WHERE title LIKE :term 
+OR url LIKE :term 
+OR keywords LIKE :term 
+OR description LIKE :term
+ORDER BY clicks DESC
+LIMIT :fromLimit, :pageSize");
+
+jquerry cdn для увеличение кликов
+f(isset($_POST["linkId"])) {
+	$query = $con->prepare("UPDATE sites SET clicks = clicks + 1 WHERE id=:id");
+	$query->bindParam(":id", $_POST["linkId"]);
+	$query->execute();
+
+//Masonry помогает расположить картинки так, чтобы было красиво
+
+//broken = 1 чтобы убрать сломанные картинки
+if(isset($_POST["src"])) {
+	$query = $con->prepare("UPDATE images SET broken = 1 WHERE imageUrl=:src");
+	$query->bindParam(":src", $_POST["src"]);
+
+	$query->execute();
+
+//fancybox для превью функциональности
+$("[data-fancybox]").fancybox({
+
+	caption : function( instance, item ) {
+	var caption = $(this).data('caption') || '';
+	var siteUrl = $(this).data('siteurl') || '';
+
+	if ( item.type === 'image' ) {
+            caption = (caption.length ? caption + '<br />' : '')
+             + '<a href="' + item.src + '">Посмотреть изображение</a><br>'
+             + '<a href="' + siteUrl + '">Посетить сайт</a>';
+        }
+
+        return caption;
+    },
+    afterShow : function( instance, item ) {
+        increaseImageClicks(item.src);
+    }
+});
