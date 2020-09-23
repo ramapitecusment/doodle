@@ -309,7 +309,7 @@ if(isset($_POST["src"])) {
 	$query->execute();
 ```
 
-#### fancybox for the preview functionality
+#### Fancybox for the preview functionality
 
 ```
 $("[data-fancybox]").fancybox({
