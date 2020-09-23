@@ -5,7 +5,7 @@ Here you can click on "search". By clicking on the button, the form redirects
 the user to search.php, where there will be a querry to the database that will 
 display all available sites/images.
 
-![alt text](https://raw.githubusercontent.com/ramapitecusment/doodle/master/images_git/0.png)
+![alt text](https://raw.githubusercontent.com/ramapitecusment/doodle/master/Images_git/0.png)
 
 The objective of the project is to create a search engine with the following functionality:
 1. Search the sites for keywords;
@@ -21,14 +21,14 @@ Important: _display__:_ _flex_, _Google_ _Inspector_, _DomDocument_.
 
 The database consists of two tables:
 
-![alt text](https://raw.githubusercontent.com/ramapitecusment/doodle/master/images_git/1.png)
+![alt text](https://raw.githubusercontent.com/ramapitecusment/doodle/master/Images_git/1.png)
 
 The "sites" table contains such columns as:” id“,” url“,” title“,” description“,” 
 keywords“,”clicks". It stores links to the site, the site table of contents, 
 site description, keywords, and the number of mouse clicks on the link to determine 
 the relevance of the website, which will help the service display frequently visited sites on the first page.
 
-![alt text](https://raw.githubusercontent.com/ramapitecusment/doodle/master/images_git/2.png)
+![alt text](https://raw.githubusercontent.com/ramapitecusment/doodle/master/Images_git/2.png)
 
 The database consists of two tables. Table "Images" stores: 
 - Reference to the website;
@@ -38,7 +38,7 @@ The database consists of two tables. Table "Images" stores:
 - Number of clicks on the image;
 - Is the link to the picture "broken" (0 or 1 parameter). 
 
-![alt text](https://raw.githubusercontent.com/ramapitecusment/doodle/master/images_git/3.png)
+![alt text](https://raw.githubusercontent.com/ramapitecusment/doodle/master/Images_git/3.png)
 
 ### Query execution:
 The mysqli_query(), mysqli_real_query (), and mysqli_multi_query () functions are 
@@ -200,17 +200,18 @@ The number of sites displayed at the same time is 20, and the number of images i
 	}
 ?>
 ```
-![alt text](https://raw.githubusercontent.com/ramapitecusment/doodle/master/images_git/4.png)
+![alt text](https://raw.githubusercontent.com/ramapitecusment/doodle/master/Images_git/4.png)
 
-![alt text](https://raw.githubusercontent.com/ramapitecusment/doodle/master/images_git/5.png)
+![alt text](https://raw.githubusercontent.com/ramapitecusment/doodle/master/Images_git/5.png)
 
 ### Mansonry
 
 Masonry is a JavaScript grid layout library. It works by placing elements in optimal position based on available vertical 
 space, sort of like a mason fitting stones in a wall. You’ve probably seen it in use all over the Internet.
 
-![alt text](https://raw.githubusercontent.com/ramapitecusment/doodle/master/images_git/gif.gif)
-![alt text](https://raw.githubusercontent.com/ramapitecusment/doodle/master/images_git/6.png)
+![alt text](https://raw.githubusercontent.com/ramapitecusment/doodle/master/Images_git/gif.gif)
+
+![alt text](https://raw.githubusercontent.com/ramapitecusment/doodle/master/Images_git/6.png)
 
 ### Interesting functionality
 
